@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
       "declaration": true,
+      "esModuleInterop": true,
       "inlineSourceMap": false,
       "lib": [
           "dom",
@@ -12,7 +13,7 @@
       "noImplicitAny": false,
       "outDir": "./lib",
       "removeComments": false,
-      "rootDir": "src",
+      "resolveJsonModule": true,
       "sourceMap": true,
       "target": "es5",
       "incremental": true

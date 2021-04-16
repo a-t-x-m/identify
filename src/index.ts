@@ -1,7 +1,9 @@
 import DeveloperConsole from '@atxm/developer-console';
+import meta from '../package.json';
 
-const console = new DeveloperConsole();
-const meta = '@atxm/identify';
+const console = new DeveloperConsole({
+  name: meta.name
+});
 
 function initIDs(): void {
   const editors = atom.workspace.getTextEditors();
@@ -20,12 +22,12 @@ function addEditorID(editor): void {
     const buffer = editor.buffer;
 
     if (editor?.id && !view.getAttribute('data-editor-id')) {
-      console.log(`${meta}: Add data-attribute for editor #${editor.id}`);
+      console.log(`Add data-attribute for editor #${editor.id}`);
       view.setAttribute('data-editor-id', editor.id);
     }
 
     if (buffer.id && !view.getAttribute('data-buffer-id')) {
-      console.log(`${meta}: Add data-attribute for buffer #${buffer.id}`);
+      console.log(`Add data-attribute for buffer #${buffer.id}`);
       view.setAttribute('data-buffer-id', buffer.id);
     }
   }
@@ -36,7 +38,7 @@ function addPaneID(pane): void {
     const view: HTMLElement = atom.views.getView(pane);
 
     if (!view.getAttribute('data-pane-id')) {
-      console.log(`${meta}: Add data-attribute for pane #${pane.id}`);
+      console.log(`Add data-attribute for pane #${pane.id}`);
       view.setAttribute('data-pane-id', pane.id);
     }
   }

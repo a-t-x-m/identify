@@ -1,0 +1,37 @@
+{
+    "name": "@atxm/identify",
+    "version": "0.2.4",
+    "description": "Adds data attributes for editor and pane IDs to the respective HTML element",
+    "license": "MIT OR GPL-2.0",
+    "scripts": {
+        "build": "tsc --pretty --project ./",
+        "dev": "tsc --watch --pretty --project ./",
+        "lint": "tslint --project ./",
+        "test": "npm run lint"
+    },
+    "main": "lib/index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/a-t-x-m/identify.git"
+    },
+    "keywords": [
+        "atom",
+        "atom package"
+    ],
+    "dependencies": {
+        "@atxm/developer-console": "^0.5.0"
+    },
+    "devDependencies": {
+        "@types/atom": "^1.36.2",
+        "@types/node": "^14.14.41",
+        "husky": ">=4 <5",
+        "rimraf": "^3.0.2",
+        "tslint": "^6.0.0",
+        "typescript": "^3.7.5"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run lint"
+        }
+    }
+}
