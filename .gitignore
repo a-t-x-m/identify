@@ -1,14 +1,13 @@
-# dependencies
+# Package Managers
 bower_components/
 node_modules/
-vendor/
-
-# package manager files
-npm-debug.log*
+*npm-debug.log*
 yarn-error.log
 
-# project specific
-test.js
-test.ts
-todo.md
+# Development
+.eslintcache
+.rollup.cache/
+.stylelintcache
+.yo-rc.json
+*.map
 tsconfig.tsbuildinfo
